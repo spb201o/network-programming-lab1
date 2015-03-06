@@ -6,10 +6,10 @@ import "bufio"
 import "os"
 
 func main() {
-    conn, err := net.Dial("tcp", "127.0.0.1:1145")
+    conn, err := net.Dial("tcp", os.Args[1])
 
     if err != nil {
-        os.Exit(-11)
+        os.Exit(-1)
     }
 
     for { 
